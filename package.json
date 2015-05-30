@@ -1,0 +1,23 @@
+{
+  "name": "ghost-inject",
+  "version": "0.0.2",
+  "description": "Dependency injection (DI) management tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gelidus/ghost-inject.git"
+  },
+  "keywords": [
+    "DI",
+    "Dependency",
+    "Injection",
+    "ghost",
+    "injector",
+    "injection"
+  ],
+  "author": "Gelidus",
+  "license": "MIT"
+}

@@ -1,6 +1,8 @@
-#Ghost inject
+#Ghost inject [![npm version](https://badge.fury.io/js/ghost-inject.svg)](http://badge.fury.io/js/ghost-inject)[![Build Status](https://travis-ci.org/Gelidus/ghost-inject.svg?branch=master)](https://travis-ci.org/Gelidus/ghost-inject)
 
-## Installation [![npm version](https://badge.fury.io/js/ghost-inject.svg)](http://badge.fury.io/js/ghost-inject)[![Build Status](https://travis-ci.org/Gelidus/ghost-inject.svg?branch=master)](https://travis-ci.org/Gelidus/ghost-inject)
+Ghost is simple dependency injection manager. It is easy to use and avaliable in node.js and browser. No dependencies are needed.
+
+## Installation
 ```sh
 $ npm install ghost-inject
 ```

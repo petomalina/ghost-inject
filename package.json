@@ -21,6 +21,7 @@
   "author": "Gelidus",
   "license": "MIT",
   "devDependencies": {
+    "coffee-script": "^1.9.0",
     "mocha": "^2.1.0",
     "should": "^4.4.4",
     "should-type": "0.0.4"

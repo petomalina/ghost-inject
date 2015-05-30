@@ -1,6 +1,6 @@
 {
   "name": "ghost-inject",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Dependency injection (DI) management tool",
   "main": "index.js",
   "scripts": {

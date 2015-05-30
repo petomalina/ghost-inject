@@ -52,12 +52,12 @@ class Ghost
   # @return instance[Object] created object
   #
   # Creates new instance with injected constructor
-  create: (Constructor, dependencyList = null) ->
+  create: (func, dependencyList = null) ->
     dependant = () ->
-    dependant.prototype = Constructor.prototype
+    dependant.prototype = func.prototype
 
     instance = new dependant()
-    @inject(Constructor, instance, dependencyList)
+    @call(func, instance, dependencyList)
 
     return instance
 

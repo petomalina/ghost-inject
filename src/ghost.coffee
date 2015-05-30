@@ -4,7 +4,7 @@ containt service without factory (eg. application core items)
 
 @note This class is inspired by angular dependency injection system
 ###
-module.exports = class Injector
+class Ghost
 
   ###
   Initializes both, factories and services maps.
@@ -105,3 +105,5 @@ module.exports = class Injector
       trueArgs.push arg if arg isnt ''
 
     return trueArgs
+
+if typeof exports is "undefined" then @["Ghost"] = Ghost else module.exports = Ghost

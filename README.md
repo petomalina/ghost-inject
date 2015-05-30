@@ -36,3 +36,50 @@ databaseFactory = function() {
 
 injector.addFactory("database", databaseFactory);
 ```
+
+**Calling functions with dependencies**
+```javascript
+func = function(database) {
+  // database is injected here if service or factory was provided before
+};
+
+injector.call(func)
+```
+
+**Injecting functions**
+```javascript
+func = function(database) {
+  // database is injected here if service or factory was provided before
+};
+
+// injector will return function with bound arguments
+bound = injector.inject(func);
+```
+
+> both `call` and `inject` can be provided with **this** parameter as a second parameter. Also additional dependency list can be provided for local dependencies.
+
+**Creating instances**
+```javascript
+car = function(people) {
+  this.people = people;
+  this.handbreak = true;
+};
+
+myCar = injector.create(car);
+```
+
+**Resolving dependencies**
+```javascript
+func = function(firstdep, seconddep) {};
+
+deps = injector.resolve(func);
+// deps is now array containing arguments for the given function
+```
+
+**Getting function arguments**
+```javascript
+func = function(a, b, c) {};
+
+deps = injector.getArguments(func)
+// deps = ['a', 'b', 'c']
+```

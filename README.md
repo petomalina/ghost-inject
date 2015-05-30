@@ -54,6 +54,7 @@ func = function(database) {
 
 // injector will return function with bound arguments
 bound = injector.inject(func);
+bound(); // call injected function
 ```
 
 > both `call` and `inject` can be provided with **this** parameter as a second parameter. Also additional dependency list can be provided for local dependencies.

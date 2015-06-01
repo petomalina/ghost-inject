@@ -69,6 +69,8 @@ car = function(people) {
 myCar = injector.create(car);
 ```
 
+> `people` argument will here be injected into constructor if service called `people` was previously defined
+
 **Resolving dependencies**
 ```javascript
 func = function(firstdep, seconddep) {};

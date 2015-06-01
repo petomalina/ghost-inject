@@ -11,6 +11,8 @@ $ npm install ghost-inject
 
 **Initialization**
 ```javascript
+Ghost = require("ghost-inject")
+
 injector = new Ghost();
 ```
 

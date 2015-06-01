@@ -93,6 +93,27 @@ describe "Ghost", () ->
     (deps[1]?).should.be.false
     deps[2].should.be.eql(i.getService("dataservice"))
 
+  it "should resolve dependencies with dependency list", () ->
+    i = new Ghost
+
+    i.addService("a", { a: 5 })
+    i.addService("d", { d: true })
+
+    func = (a, b, c, d) ->
+
+    deps = i.resolve(func, {b: 5, c: 10})
+    # existential check
+    (deps[0]?).should.be.true
+    (deps[1]?).should.be.true
+    (deps[2]?).should.be.true
+    (deps[3]?).should.be.true
+
+    # value check
+    deps[0].a.should.be.eql(5)
+    deps[1].should.be.eql(5)
+    deps[2].should.be.eql(10)
+    deps[3].should.be.eql.true
+
   it "should resolve arguments of function", () ->
     i = new Ghost
 

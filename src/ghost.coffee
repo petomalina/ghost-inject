@@ -82,14 +82,13 @@ class Ghost
   # @param dependencyList[Object] previously defined dependency list
   #         if no dependency list is defined, Injector will be used instead
   # @return dependencies[Array] ordered list of dependencies
-  resolve: (func, dependencyList = null) =>
+  resolve: (func, dependencyList = {}) =>
     keys = @getArguments func
     dependencies = []
 
-    if dependencyList?
-      dependencies.push(dependencyList[key]) for key in keys
-    else
-      dependencies = keys.map(@getService, @)
+    for key in keys
+      dep = dependencyList[key] || @getService(key)
+      dependencies.push(dep)
 
     return dependencies
 

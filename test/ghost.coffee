@@ -103,3 +103,22 @@ describe "Ghost", () ->
     deps[0].should.be.eql("a")
     deps[3].should.be.eql("xa")
     deps[4].should.be.eql("service")
+
+  it "should create instance of the class", (done) ->
+    i = new Ghost
+
+    i.addService("service", {
+      a: 5
+    })
+    i.addService("db", {
+      connected: true
+    })
+
+    class C
+      constructor: (service, db, maybenull) ->
+        service.a.should.be.eql(5)
+        db.connected.should.be.true
+        (maybenull?).should.be.false
+        done()
+
+    i.create(C)

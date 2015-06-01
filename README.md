@@ -59,6 +59,8 @@ bound(); // call injected function
 
 > both `call` and `inject` can be provided with **this** parameter as a second parameter. Also additional dependency list can be provided for local dependencies.
 
+> if **collision** occurs within specified list and service in the injector, service from the list will be used
+
 **Creating instances**
 ```javascript
 car = function(people) {
